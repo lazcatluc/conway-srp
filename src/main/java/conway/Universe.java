@@ -12,10 +12,11 @@ public class Universe {
 	}
 
 	public Universe evolve() {
-		if (cells.stream().noneMatch(Cell::isToBeKilled)) {
-			return this;
-		}
-		return EmptyUniverse.get();
+		return new Universe(cells.stream().filter(cell -> !cell.isToBeKilled()).toArray(Cell[]::new));
+	}
+
+	public Collection<Cell> getCells() {
+		return cells;
 	}
 
 }

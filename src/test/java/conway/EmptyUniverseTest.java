@@ -8,6 +8,6 @@ public class EmptyUniverseTest {
 	
 	@Test
 	public void evolvesToEmpty() throws Exception {
-		assertThat(EmptyUniverse.get().evolve()).isEqualTo(EmptyUniverse.get());
+		assertThat(EmptyUniverse.get().evolve().getCells()).isEqualTo(EmptyUniverse.get().getCells());
 	}
 }

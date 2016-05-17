@@ -1,6 +1,6 @@
 package conway;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
@@ -11,6 +11,6 @@ public class UniverseWithIsolatedCellTest {
 		Cell cell = new IsolatedCell();
 		Universe universeWithCell = new Universe(cell);
 		
-		assertThat(universeWithCell.evolve()).isEqualTo(EmptyUniverse.get());
+		assertThat(universeWithCell.evolve().getCells()).isEqualTo(EmptyUniverse.get().getCells());
 	}
 }
