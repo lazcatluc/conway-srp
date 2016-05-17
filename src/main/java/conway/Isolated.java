@@ -1,6 +1,6 @@
 package conway;
 
-public class IsolatedCell implements Cell {
+public class Isolated implements Cell {
 
 	@Override
 	public boolean isToBeKilled() {

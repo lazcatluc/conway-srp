@@ -1,6 +1,6 @@
 package conway;
 
-public class HealthyCell implements Cell {
+public class Healthy implements Cell {
 
 	public boolean isToBeKilled() {
 		return false;

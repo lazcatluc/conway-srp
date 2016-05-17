@@ -2,11 +2,11 @@ package conway;
 
 import org.junit.Test;
 
-public class UniverseWithMixedCellsTest {
+public class MixedCellsTest {
 	@Test
 	public void keepsOnlyHealthyCells() throws Exception {
-		Cell isolated = new IsolatedCell();
-		Cell healthy = new HealthyCell();
+		Cell isolated = new Isolated();
+		Cell healthy = new Healthy();
 		
 		new AssertThatUniverseWith(isolated, healthy).evolvesTo(healthy);
 	}
