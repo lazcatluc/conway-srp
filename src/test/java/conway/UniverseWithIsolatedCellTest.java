@@ -11,6 +11,6 @@ public class UniverseWithIsolatedCellTest {
 		Cell cell = new IsolatedCell();
 		Universe universeWithCell = new Universe(cell);
 		
-		assertThat(universeWithCell.evolve().getCells()).isEqualTo(EmptyUniverse.get().getCells());
+		assertThat(new Evolver().evolve(universeWithCell).getCells()).isEqualTo(EmptyUniverse.get().getCells());
 	}
 }

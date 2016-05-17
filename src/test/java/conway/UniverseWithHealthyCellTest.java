@@ -10,6 +10,6 @@ public class UniverseWithHealthyCellTest {
 		HealthyCell cell = new HealthyCell();
 		Universe universeWithCell = new Universe(cell);
 		
-		assertThat(universeWithCell.evolve().getCells()).isEqualTo(universeWithCell.getCells());
+		assertThat(new Evolver().evolve(universeWithCell).getCells()).isEqualTo(universeWithCell.getCells());
 	}
 }

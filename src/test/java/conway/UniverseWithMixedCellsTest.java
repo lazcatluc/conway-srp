@@ -10,6 +10,6 @@ public class UniverseWithMixedCellsTest {
 		Cell isolated = new IsolatedCell();
 		Cell healthy = new HealthyCell();
 		
-		assertThat(new Universe(isolated, healthy).evolve().getCells()).isEqualTo(new Universe(healthy).getCells());
+		assertThat(new Evolver().evolve(new Universe(isolated, healthy)).getCells()).isEqualTo(new Universe(healthy).getCells());
 	}
 }

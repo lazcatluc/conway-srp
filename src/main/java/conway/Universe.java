@@ -11,10 +11,6 @@ public class Universe {
 		this.cells = Arrays.asList(cells);
 	}
 
-	public Universe evolve() {
-		return new Universe(cells.stream().filter(cell -> !cell.isToBeKilled()).toArray(Cell[]::new));
-	}
-
 	public Collection<Cell> getCells() {
 		return cells;
 	}
