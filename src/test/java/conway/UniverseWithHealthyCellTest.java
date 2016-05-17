@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Test;
 
-public class UniverseWithCellThatShouldNotBeKilledTest {
+public class UniverseWithHealthyCellTest {
 	@Test
 	public void keepsCellOnEvolution() throws Exception {
 		HealthyCell cell = new HealthyCell();

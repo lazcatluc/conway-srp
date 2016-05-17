@@ -7,7 +7,7 @@ import org.junit.Test;
 public class UniverseWithIsolatedCellTest {
 	
 	@Test
-	public void keepsCellOnEvolution() throws Exception {
+	public void removesCellOnEvolution() throws Exception {
 		Cell cell = new IsolatedCell();
 		Universe universeWithCell = new Universe(cell);
 		
