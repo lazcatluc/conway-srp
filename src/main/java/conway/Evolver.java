@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import cell.New;
+
 public class Evolver {
 	
 	private final CellFactory cellFactory;
@@ -20,14 +22,18 @@ public class Evolver {
 		
 	}
 	
+	
 	private void reviveCells(Map<Location, Cell> cells) {
 		Map<Location, Cell> newCells = new HashMap<>();
-		cells.forEach((location, cell) -> 
-			location.getNeighbors().forEach(newLocation -> { 
-				if (!cells.containsKey(newLocation)) { 
-					addNewLocationToNewCells(cells, newCells, newLocation);
-				}
-			})
+		cells.forEach((location, cell) -> {
+				if (!(cell instanceof New)) {
+					location.getNeighbors().forEach(newLocation -> { 
+						if (!cells.containsKey(newLocation)) { 
+							addNewLocationToNewCells(cells, newCells, newLocation);
+						}
+					});
+				};
+			}
 		);
 		cells.putAll(newCells);
 	}
