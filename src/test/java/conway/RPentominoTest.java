@@ -1,6 +1,6 @@
 package conway;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.StrictAssertions.assertThat;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,9 +11,7 @@ import cartesian.CartesianLocator;
 import cell.Healthy;
 import cell.Overcrowded;
 import cell.factory.CompositeCellFactory;
-import cell.factory.IsolateAt;
 import cell.factory.KeepAliveAt;
-import cell.factory.OvercrowdAt;
 import cell.factory.ResurectAt;
 
 public class RPentominoTest {
@@ -27,9 +25,7 @@ public class RPentominoTest {
 		map.put(CartesianLocator.get(0, -1), new Healthy());
 		Universe universe = new Universe(map);
 		Evolver evolver = new Evolver(new CompositeCellFactory(
-				new IsolateAt(0), new IsolateAt(1),
 				new KeepAliveAt(2), new KeepAliveAt(3),
-				new OvercrowdAt(4), new OvercrowdAt(5), new OvercrowdAt(6), new OvercrowdAt(7), new OvercrowdAt(8),
 				new ResurectAt(3)
 			));
 		
