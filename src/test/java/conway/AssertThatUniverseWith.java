@@ -17,7 +17,8 @@ public class AssertThatUniverseWith {
 	}
 	
 	public void evolvesTo(Cell...cells) {
-		assertThat(new HashSet<>(new Evolver(new CellFactory() {}).evolve(universe).getCells().values()))
+		new Evolver(new CellFactory() {}).evolve(universe);
+		assertThat(new HashSet<>(universe.getCells().values()))
 			.isEqualTo(new HashSet<>(universeWithCells(cells).getCells().values()));
 	}
 	

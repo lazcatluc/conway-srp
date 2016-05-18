@@ -20,7 +20,7 @@ public class RPentominoTest {
 				new CompositeCellFactory(new KeepAliveAt(2), new KeepAliveAt(3), new ResurectAt(3)));
 
 		for (int i = 0; i < 1133; i++) {
-			universe = evolver.evolve(universe);
+			evolver.evolve(universe);
 		}
 		assertThat(universe.getCells().size()).isEqualTo(116);
 	}

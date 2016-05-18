@@ -14,14 +14,11 @@ public class Evolver {
 		this.cellFactory = cellFactory;
 	}
 
-	public Universe evolve(Universe universe) {
-		Map<Location, Cell> cells = new HashMap<>(universe.getCells());
-		reviveCells(cells);
-		killOldCells(cells);
-		return new Universe(buildNewCells(cells));
-		
-	}
-	
+	public void evolve(Universe universe) {
+		reviveCells(universe.getCells());
+		killOldCells(universe.getCells());
+		buildNewCells(universe.getCells());
+	}	
 	
 	private void reviveCells(Map<Location, Cell> cells) {
 		Map<Location, Cell> newCells = new HashMap<>();
@@ -48,12 +45,13 @@ public class Evolver {
 		}
 	}
 
-	private Map<Location, Cell> buildNewCells(Map<Location, Cell> cells) {
+	private void buildNewCells(Map<Location, Cell> cells) {
 		Map<Location, Cell> newCells = new HashMap<>();
 		cells.forEach((location, cell) ->  {
 			addNewLocationToNewCells(cells, newCells, location);
 		});
-		return newCells;
+		cells.clear();
+		cells.putAll(newCells);
 	}
 
 	private void addNewLocationToNewCells(Map<Location, Cell> currentCells, Map<Location, Cell> newCells,
