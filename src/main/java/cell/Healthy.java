@@ -1,4 +1,6 @@
-package conway;
+package cell;
+
+import conway.Cell;
 
 public class Healthy implements Cell {
 

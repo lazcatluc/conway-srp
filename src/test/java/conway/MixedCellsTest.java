@@ -2,6 +2,9 @@ package conway;
 
 import org.junit.Test;
 
+import cell.Healthy;
+import cell.Isolated;
+
 public class MixedCellsTest {
 	@Test
 	public void keepsOnlyHealthyCells() throws Exception {

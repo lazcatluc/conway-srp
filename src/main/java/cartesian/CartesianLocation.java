@@ -1,14 +1,16 @@
-package conway;
+package cartesian;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import conway.Location;
 
 public class CartesianLocation implements Location {
 
 	private final int x;
 	private final int y;
 
-	public CartesianLocation(int x, int y) {
+	protected CartesianLocation(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -19,11 +21,17 @@ public class CartesianLocation implements Location {
 		for (int i = -1; i < 2; i++) {
 			for (int j = -1; j < 2; j++) {
 				if (i != 0 || j != 0) {
-					neighbors.add(new CartesianLocation(x + i, y + j));
+					neighbors.add(CartesianLocator.get(x + i, y + j));
 				}
 			}
 		}
 		return neighbors;
 	}
 
+	@Override
+	public String toString() {
+		return "[x=" + x + ", y=" + y + "]";
+	}
+
+	
 }

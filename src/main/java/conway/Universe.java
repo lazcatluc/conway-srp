@@ -1,17 +1,16 @@
 package conway;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.Map;
 
 public class Universe {
 
-	private final Collection<Cell> cells;
+	private final Map<Location, Cell> cells;
 
-	public Universe(Cell... cells) {
-		this.cells = Arrays.asList(cells);
+	public Universe(Map<Location, Cell> cells) {
+		this.cells = cells;
 	}
 
-	public Collection<Cell> getCells() {
+	public Map<Location, Cell> getCells() {
 		return cells;
 	}
 

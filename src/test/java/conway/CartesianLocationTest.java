@@ -4,9 +4,11 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Test;
 
+import cartesian.CartesianLocator;
+
 public class CartesianLocationTest {
 	@Test
 	public void has8neighbors() throws Exception {
-		assertThat(new CartesianLocation(0,0).getNeighbors().size()).isEqualTo(8);
+		assertThat(CartesianLocator.get(0,0).getNeighbors().size()).isEqualTo(8);
 	}
 }

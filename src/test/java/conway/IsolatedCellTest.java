@@ -2,6 +2,8 @@ package conway;
 
 import org.junit.Test;
 
+import cell.Isolated;
+
 public class IsolatedCellTest {
 	
 	@Test
