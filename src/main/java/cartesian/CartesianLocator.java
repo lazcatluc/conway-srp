@@ -5,7 +5,7 @@ import java.util.Map;
 
 import conway.Location;
 
-public class CartesianLocator {
+class CartesianLocator {
 	private static final Map<Integer, Map<Integer, Location>> LOCATIONS = new HashMap<>();
 	
 	public static synchronized Location get(int x, int y) {

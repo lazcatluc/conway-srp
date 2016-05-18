@@ -1,4 +1,4 @@
-package conway;
+package cartesian;
 
 import static org.assertj.core.api.Assertions.*;
 
