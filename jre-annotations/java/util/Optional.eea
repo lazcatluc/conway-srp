@@ -1,0 +1,7 @@
+class java/util/Optional
+orElse
+ (TT;)TT;
+ (T0T;)T1T;
+orElseGet
+ (Ljava/util/function/Supplier<+TT;>;)TT;
+ (Ljava/util/function/Supplier<+TT;>;)T1T;
