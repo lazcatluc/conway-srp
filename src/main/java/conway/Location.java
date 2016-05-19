@@ -2,6 +2,8 @@ package conway;
 
 import java.util.Set;
 
+import javax.annotation.Nonnull;
+
 public interface Location {
-	Set<Location> getNeighbors();
+	Set<@Nonnull Location> getNeighbors();
 }

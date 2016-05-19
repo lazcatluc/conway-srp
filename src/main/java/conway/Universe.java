@@ -2,11 +2,13 @@ package conway;
 
 import java.util.Map;
 
+import javax.annotation.Nonnull;
+
 public class Universe {
 
-	private final Map<Location, Cell> cells;
+	private final Map<@Nonnull Location, Cell> cells;
 
-	public Universe(Map<Location, Cell> cells) {
+	public Universe(Map<@Nonnull Location, Cell> cells) {
 		this.cells = cells;
 	}
 

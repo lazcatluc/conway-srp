@@ -1,0 +1,4 @@
+class java/util/Map
+getOrDefault
+ (Ljava/lang/Object;TV;)TV;
+ (Ljava/lang/Object;TV;)T1V;

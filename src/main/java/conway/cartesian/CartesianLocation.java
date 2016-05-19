@@ -3,6 +3,8 @@ package conway.cartesian;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.annotation.Nonnull;
+
 import conway.Location;
 
 public class CartesianLocation implements Location {
@@ -16,8 +18,8 @@ public class CartesianLocation implements Location {
 	}
 
 	@Override
-	public Set<Location> getNeighbors() {
-		Set<Location> neighbors = new HashSet<>();
+	public Set<@Nonnull Location> getNeighbors() {
+		Set<@Nonnull Location> neighbors = new HashSet<>();
 		for (int i = -1; i < 2; i++) {
 			for (int j = -1; j < 2; j++) {
 				if (i != 0 || j != 0) {

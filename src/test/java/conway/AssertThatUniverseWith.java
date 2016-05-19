@@ -12,7 +12,7 @@ import javax.annotation.Nonnull;
 
 public class AssertThatUniverseWith {
 	
-	private final @Nonnull Universe universe;
+	private final Universe universe;
 
 	public AssertThatUniverseWith(Cell...cells) {
 		this.universe = universeWithCells(cells);
@@ -24,8 +24,8 @@ public class AssertThatUniverseWith {
 			.isEqualTo(new HashSet<>(universeWithCells(cells).getCells().values()));
 	}
 	
-	private @Nonnull Universe universeWithCells(Cell...cells) {
-		Map<Location, Cell> cellsWithLocation = new HashMap<>();
+	private Universe universeWithCells(Cell...cells) {
+		Map<@Nonnull Location, Cell> cellsWithLocation = new HashMap<>();
 		Arrays.stream(cells).forEach(cell -> cellsWithLocation.put(mock(Location.class), cell));
 		return new Universe(cellsWithLocation);
 	}
