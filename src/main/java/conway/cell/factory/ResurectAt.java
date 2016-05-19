@@ -1,6 +1,6 @@
-package cell.factory;
+package conway.cell.factory;
 
-import cell.New;
+import conway.cell.New;
 
 public class ResurectAt extends CellNeighborsFactory implements ForDead {
 

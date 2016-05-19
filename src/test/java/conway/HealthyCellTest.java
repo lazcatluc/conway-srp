@@ -2,7 +2,7 @@ package conway;
 
 import org.junit.Test;
 
-import cell.Healthy;
+import conway.cell.Healthy;
 
 public class HealthyCellTest {
 	@Test

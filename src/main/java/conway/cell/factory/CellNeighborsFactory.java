@@ -1,9 +1,11 @@
-package cell.factory;
+package conway.cell.factory;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Supplier;
+
+import javax.annotation.Nonnull;
 
 import conway.Cell;
 import conway.CellFactory;
@@ -11,9 +13,9 @@ import conway.Location;
 
 public class CellNeighborsFactory implements CellFactory {	
 	private final int necessaryNeighbors;
-	private final Supplier<Cell> cellFactory;
+	private final Supplier<@Nonnull Cell> cellFactory;
 	
-	public CellNeighborsFactory(int necessaryNeighbors, Supplier<Cell> cellFactory) {
+	public CellNeighborsFactory(int necessaryNeighbors, Supplier<@Nonnull Cell> cellFactory) {
 		this.necessaryNeighbors = necessaryNeighbors;
 		this.cellFactory = cellFactory;
 	}

@@ -1,6 +1,6 @@
-package cell.factory;
+package conway.cell.factory;
 
-import cell.Isolated;
+import conway.cell.Isolated;
 
 public class IsolateAt extends CellNeighborsFactory implements ForLiving {
 

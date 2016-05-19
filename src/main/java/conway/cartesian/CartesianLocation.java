@@ -1,4 +1,4 @@
-package cartesian;
+package conway.cartesian;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,11 +27,5 @@ public class CartesianLocation implements Location {
 		}
 		return neighbors;
 	}
-
-	@Override
-	public String toString() {
-		return "[x=" + x + ", y=" + y + "]";
-	}
-
 	
 }

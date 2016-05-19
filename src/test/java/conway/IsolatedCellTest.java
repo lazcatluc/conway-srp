@@ -2,7 +2,7 @@ package conway;
 
 import org.junit.Test;
 
-import cell.Isolated;
+import conway.cell.Isolated;
 
 public class IsolatedCellTest {
 	

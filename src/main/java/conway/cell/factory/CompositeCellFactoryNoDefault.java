@@ -1,4 +1,4 @@
-package cell.factory;
+package conway.cell.factory;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -21,7 +21,7 @@ public class CompositeCellFactoryNoDefault implements CellFactory {
 		return factories.stream().filter(
 				factory -> currentLocation.containsKey(location) ? factory instanceof ForLiving : factory instanceof ForDead)
 			.map(factory -> factory.makeAt(currentLocation, location))
-			.filter(cell -> !Cell.NULL.equals(cell)).findFirst().orElseGet(() -> Cell.NULL);
+			.filter(cell -> !Cell.NULL.equals(cell)).findFirst().orElse(Cell.NULL);
 	}
 
 }

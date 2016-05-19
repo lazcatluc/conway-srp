@@ -1,8 +1,8 @@
-package cell;
+package conway.cell;
 
 import conway.Cell;
 
-public class Overcrowded implements Cell {
+public class Isolated implements Cell {
 
 	@Override
 	public boolean isToBeKilled() {

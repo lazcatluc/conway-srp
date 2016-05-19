@@ -1,7 +1,7 @@
-package cartesian;
+package conway.cartesian;
 
-import cell.New;
 import conway.Universe;
+import conway.cell.New;
 
 public class CartesianCellAdder {
 	private final Universe universe;

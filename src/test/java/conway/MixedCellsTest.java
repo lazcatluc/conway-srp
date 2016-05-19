@@ -2,8 +2,8 @@ package conway;
 
 import org.junit.Test;
 
-import cell.Healthy;
-import cell.Isolated;
+import conway.cell.Healthy;
+import conway.cell.Isolated;
 
 public class MixedCellsTest {
 	@Test

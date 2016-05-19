@@ -1,10 +1,12 @@
-package cell;
+package conway.cell;
 
 import conway.Cell;
 
-public class Healthy implements Cell {
+public class New implements Cell {
 
+	@Override
 	public boolean isToBeKilled() {
 		return false;
 	}
+
 }

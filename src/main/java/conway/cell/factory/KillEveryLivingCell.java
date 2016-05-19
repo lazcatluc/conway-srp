@@ -1,4 +1,4 @@
-package cell.factory;
+package conway.cell.factory;
 
 import java.util.Map;
 

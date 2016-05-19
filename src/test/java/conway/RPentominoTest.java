@@ -6,10 +6,10 @@ import java.util.HashMap;
 
 import org.junit.Test;
 
-import cartesian.CartesianCellAdder;
-import cell.factory.CompositeCellFactory;
-import cell.factory.KeepAliveAt;
-import cell.factory.ResurectAt;
+import conway.cartesian.CartesianCellAdder;
+import conway.cell.factory.CompositeCellFactory;
+import conway.cell.factory.KeepAliveAt;
+import conway.cell.factory.ResurectAt;
 
 public class RPentominoTest {
 	@Test

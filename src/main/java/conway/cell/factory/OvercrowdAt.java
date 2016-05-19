@@ -1,6 +1,6 @@
-package cell.factory;
+package conway.cell.factory;
 
-import cell.Overcrowded;
+import conway.cell.Overcrowded;
 
 public class OvercrowdAt extends CellNeighborsFactory implements ForLiving {
 

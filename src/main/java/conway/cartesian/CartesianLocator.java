@@ -1,4 +1,4 @@
-package cartesian;
+package conway.cartesian;
 
 import java.util.HashMap;
 import java.util.Map;

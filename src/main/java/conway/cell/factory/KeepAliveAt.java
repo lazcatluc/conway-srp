@@ -1,6 +1,6 @@
-package cell.factory;
+package conway.cell.factory;
 
-import cell.Healthy;
+import conway.cell.Healthy;
 
 public class KeepAliveAt extends CellNeighborsFactory implements ForLiving {
 

@@ -8,9 +8,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
+import javax.annotation.Nonnull;
+
 public class AssertThatUniverseWith {
 	
-	private final Universe universe;
+	private final @Nonnull Universe universe;
 
 	public AssertThatUniverseWith(Cell...cells) {
 		this.universe = universeWithCells(cells);
@@ -22,7 +24,7 @@ public class AssertThatUniverseWith {
 			.isEqualTo(new HashSet<>(universeWithCells(cells).getCells().values()));
 	}
 	
-	private Universe universeWithCells(Cell...cells) {
+	private @Nonnull Universe universeWithCells(Cell...cells) {
 		Map<Location, Cell> cellsWithLocation = new HashMap<>();
 		Arrays.stream(cells).forEach(cell -> cellsWithLocation.put(mock(Location.class), cell));
 		return new Universe(cellsWithLocation);

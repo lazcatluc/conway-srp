@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import cell.New;
+import conway.cell.New;
 
 public class Evolver {
 	

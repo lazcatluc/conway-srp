@@ -1,10 +1,10 @@
-package cartesian;
+package conway.cartesian;
 
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Test;
 
-import cartesian.CartesianLocator;
+import conway.cartesian.CartesianLocator;
 
 public class CartesianLocationTest {
 	@Test
